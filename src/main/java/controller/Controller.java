@@ -1,5 +1,8 @@
 package controller;
 
+import controller.parsers.HelloParser;
+import controller.parsers.Parser;
+import controller.parsers.WorldParser;
 import model.Model;
 import view.View;
 
@@ -19,17 +22,20 @@ public class Controller {
 
     public void processUser() {
         Scanner sc = new Scanner(System.in);
-        model.setValue(parseValue(new FirstCommand(view), sc));
-        model.addValue(parseValue(new SecondCommand(view), sc));
+        model.setValue(parseValue(new HelloParser(), sc));
+        model.addValue(parseValue(new WorldParser(), sc));
 
         view.printFinalMessage(View.OUR_VALUE, model.getValue());
     }
 
-    public String parseValue(Command command, Scanner sc) {
-        while (sc.hasNext()){
-            command.command(sc.next());
+    private String parseValue(Parser parser, Scanner sc) {
+        view.printMessage(View.INPUT_DATA);
+        while (true) {
+            String result = parser.pars(sc.next());
+            if (result != null) {
+                return result;
+            }
+            view.printMessage(View.WRONG_INPUT_DATA + View.INPUT_DATA);
         }
-        return sc.next();
     }
-
 }
