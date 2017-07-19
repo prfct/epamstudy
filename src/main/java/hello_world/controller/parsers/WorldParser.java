@@ -1,4 +1,4 @@
-package controller.parsers;
+package hello_world.controller.parsers;
 
 /**
  * @author Oleksii Petrokhalko.

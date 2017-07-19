@@ -1,8 +1,5 @@
-package controller.parsers;
+package hello_world.controller.parsers;
 
-import view.View;
-
-import java.util.Scanner;
 
 /**
  * @author Oleksii Petrokhalko.

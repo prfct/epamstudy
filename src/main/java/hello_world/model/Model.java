@@ -1,4 +1,4 @@
-package model;
+package hello_world.model;
 
 /**
  * @author Oleksii Petrokhalko.

@@ -1,4 +1,4 @@
-package view;
+package hello_world.view;
 
 /**
  * @author Oleksii Petrokhalko.

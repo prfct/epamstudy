@@ -1,10 +1,10 @@
-package controller;
+package hello_world.controller;
 
-import controller.parsers.HelloParser;
-import controller.parsers.Parser;
-import controller.parsers.WorldParser;
-import model.Model;
-import view.View;
+import hello_world.controller.parsers.HelloParser;
+import hello_world.controller.parsers.Parser;
+import hello_world.controller.parsers.WorldParser;
+import hello_world.model.Model;
+import hello_world.view.View;
 
 import java.util.Scanner;
 
