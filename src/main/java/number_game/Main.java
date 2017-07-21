@@ -1,5 +1,7 @@
 package number_game;
 
+import number_game.model.Model;
+
 /**
  * @author Oleksii Petrokhalko.
  */

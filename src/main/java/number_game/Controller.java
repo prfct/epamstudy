@@ -1,6 +1,8 @@
 package number_game;
 
 
+import number_game.model.Model;
+
 import java.util.Scanner;
 
 /**
@@ -18,31 +20,42 @@ public class Controller {
 
     public void processUser() {
         Scanner sc = new Scanner(System.in);
+        model.iniData();
         setExpectedValue();
-        setActualValue(sc);
+        view.printMessage(View.FIND_NUMBER_FROM_MIN_MAX);
+        while (true) {
+            int result = model.findExpectedValue(setActualValue(sc));
+            if (result > 0 || result < 0) {
+                view.printMessage(View.SHOULD_BE, model.getMin(), model.getMax());
+            } else if (result < 0) {
+                view.printMessage(View.SHOULD_BE, model.getMin(), model.getMax());
+            } else {
+                view.printMessage(View.WIN, model.getHistory().size(), model.getHistoryOfTries());
+                break;
+            }
+        }
 
     }
 
     private void setExpectedValue() {
-        view.printMessage(View.FIND_NUMBER_FROM_MIN_MAX);
-        model.setExpectedValue(model.rand(model.getMin(), model.getMax()));
+        model.setExpectedValue();
+        view.printMessage(View.SET_EXPECTED_VALUE);
     }
 
-    private void setActualValue(Scanner sc) {
-        view.printMessage(View.FIND_NUMBER_FROM_MIN_MAX);
+    private int setActualValue(Scanner sc) {
         while (true) {
             if (!sc.hasNextInt()) {
                 view.printMessage(View.EMPTY_VALUE);
             } else {
-                if (sc.nextInt() >= model.getMin() && sc.nextInt() <= model.getMax()) {
-                    if (model.findExpectedValue(sc.nextInt())) {
-                        break;
-                    }
+                int actual = sc.nextInt();
+                if (model.checkValue(actual)) {
+                    return actual;
                 } else {
                     view.printMessage(View.CORRECT_RANGE, model.getMin(), model.getMax());
                 }
                 sc.nextLine();
             }
+            sc.nextLine();
         }
 
     }
