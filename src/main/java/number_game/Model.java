@@ -1,4 +1,4 @@
-package number_game.model;
+package number_game;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,6 @@ public class Model {
 
     public int findExpectedValue(int actualValue) {
         history.add(actualValue);
-
         if (actualValue == expectedValue) {
             return 0;
         } else if (actualValue < expectedValue) {

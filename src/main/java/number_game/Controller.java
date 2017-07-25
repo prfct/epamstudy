@@ -1,8 +1,6 @@
 package number_game;
 
 
-import number_game.model.Model;
-
 import java.util.Scanner;
 
 /**
@@ -24,11 +22,8 @@ public class Controller {
         setExpectedValue();
         view.printMessage(View.FIND_NUMBER_FROM_MIN_MAX);
         while (true) {
-            int result = model.findExpectedValue(setActualValue(sc));
-            if (result > 0 || result < 0) {
-                view.printMessage(View.SHOULD_BE, model.getMin(), model.getMax());
-            } else if (result < 0) {
-                view.printMessage(View.SHOULD_BE, model.getMin(), model.getMax());
+            if (model.findExpectedValue(setActualValue(sc)) != 0) {
+                view.printMessage(View.NUMBER_SHOULD_BE, model.getMin(), model.getMax());
             } else {
                 view.printMessage(View.WIN, model.getHistory().size(), model.getHistoryOfTries());
                 break;
@@ -53,7 +48,6 @@ public class Controller {
                 } else {
                     view.printMessage(View.CORRECT_RANGE, model.getMin(), model.getMax());
                 }
-                sc.nextLine();
             }
             sc.nextLine();
         }

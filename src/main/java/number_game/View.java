@@ -8,7 +8,7 @@ public class View {
     public static final String SET_EXPECTED_VALUE = "Expected value set";
     public static final String EMPTY_VALUE = "Please enter number!";
     public static final String CORRECT_RANGE = "Number should be from %d to %d";
-    public static final String SHOULD_BE = "Number should be  from %d to %d";
+    public static final String NUMBER_SHOULD_BE = "Number should be  from %d to %d";
     public static final String WIN = "You win! Quantity of tries: %d. History of tries: %s";
 
     public void printMessage(String message) {
