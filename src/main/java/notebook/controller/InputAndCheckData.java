@@ -1,5 +1,7 @@
-package notebook;
+package notebook.controller;
 
+import notebook.Constants;
+import notebook.view.View;
 import notebook.parsers.Parser;
 
 import java.util.Scanner;

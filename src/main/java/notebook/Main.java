@@ -1,5 +1,8 @@
 package notebook;
 
+import notebook.controller.Controller;
+import notebook.view.View;
+
 /**
  * @author Oleksii Petrokhalko.
  */
