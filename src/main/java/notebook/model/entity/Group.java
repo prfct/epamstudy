@@ -1,4 +1,4 @@
-package notebook.model;
+package notebook.model.entity;
 
 /**
  * @author Oleksii Petrokhalko.

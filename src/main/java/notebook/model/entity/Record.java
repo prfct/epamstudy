@@ -1,4 +1,4 @@
-package notebook.model;
+package notebook.model.entity;
 
 import java.time.LocalDateTime;
 
@@ -24,7 +24,7 @@ public class Record {
     public Record() {
     }
 
-    Record(String firsName, String lastName, String firstLast, String nickName, String comment, Group group,
+    public Record(String firsName, String lastName, String firstLast, String nickName, String comment, Group group,
            String homePhone, String mobilePhone, String anotherPhone, String email, String skype, Address address, LocalDateTime firstRecord, LocalDateTime lastChange) {
         this.firsName = firsName;
         this.lastName = lastName;

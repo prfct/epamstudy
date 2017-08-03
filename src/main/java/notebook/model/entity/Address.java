@@ -1,4 +1,4 @@
-package notebook.model;
+package notebook.model.entity;
 
 /**
  * @author Oleksii Petrokhalko.
@@ -13,7 +13,7 @@ public class Address {
     public Address() {
     }
 
-    Address(String postcode, String city, String street, String houseNumber, String flatNumber) {
+    public Address(String postcode, String city, String street, String houseNumber, String flatNumber) {
         this.postcode = postcode;
         this.city = city;
         this.street = street;

@@ -1,6 +1,6 @@
 package notebook.model.builders;
 
-import notebook.model.Address;
+import notebook.model.entity.Address;
 
 /**
  * @author Oleksii Petrokhalko.

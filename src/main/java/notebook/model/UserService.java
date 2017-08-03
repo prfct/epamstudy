@@ -1,6 +1,9 @@
 package notebook.model;
 
 import notebook.Constants;
+import notebook.model.entity.Address;
+import notebook.model.entity.Group;
+import notebook.model.entity.Record;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,7 +1,5 @@
 package notebook.model.builders;
 
-import notebook.model.Address;
-
 /**
  * @author Oleksii Petrokhalko.
  */

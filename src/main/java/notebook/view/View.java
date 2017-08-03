@@ -9,7 +9,7 @@ public class View {
         System.out.println(message);
     }
 
-    public void printMessage(String message, String error) {
+    public void printMessage(String error, String message) {
         System.out.println(message + error);
     }
 

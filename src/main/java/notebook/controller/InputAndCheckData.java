@@ -18,7 +18,7 @@ public class InputAndCheckData {
         while (true) {
             String result = sc.nextLine();
             if (!parser.validate(result)) {
-                view.printMessage(Constants.WRONG_INPUT);
+                view.printMessage(Constants.WRONG_INPUT, input);
             } else {
                 return result;
             }

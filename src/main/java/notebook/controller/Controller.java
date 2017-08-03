@@ -2,7 +2,7 @@ package notebook.controller;
 
 import notebook.Constants;
 import notebook.view.View;
-import notebook.model.Record;
+import notebook.model.entity.Record;
 import notebook.model.UserService;
 import notebook.parsers.*;
 

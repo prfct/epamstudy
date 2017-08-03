@@ -1,8 +1,8 @@
 package notebook.model.builders;
 
-import notebook.model.Address;
-import notebook.model.Group;
-import notebook.model.Record;
+import notebook.model.entity.Address;
+import notebook.model.entity.Group;
+import notebook.model.entity.Record;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
